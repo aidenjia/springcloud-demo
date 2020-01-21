@@ -1,0 +1,17 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos.cluster.com:80
+management:
+  endpoint:
+    beans:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
