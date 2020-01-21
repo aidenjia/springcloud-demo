@@ -1,5 +1,5 @@
 server:
-  port: 9091
+  port: 9092
 spring:
   application:
     name: gateway
@@ -7,9 +7,14 @@ spring:
     nacos:
       discovery:
         server-addr: nacos.cluster.com:80
+        namespace: a6d80675-85e7-45d2-89da-0aa8dc3cfc7e
+        cluster-name: gateway
+        group: GATE_WAY
 management:
   endpoint:
     beans:
+      enabled: true
+    shutdown:
       enabled: true
   endpoints:
     web:
